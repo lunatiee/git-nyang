@@ -1,0 +1,5 @@
+puts("junyoung's \"tutorial\"")
+puts("\\")
+puts("Hello\nworld")
+puts("Hello\t\aworld")
+puts('Hello\t\aworld')
