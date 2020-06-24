@@ -1,3 +1,5 @@
+#OOP_Variable 3.py에서 복제
+
 class Cal:
     def __init__(self,v1,v2):
         if isinstance(v1, int):
@@ -21,27 +23,19 @@ class Cal:
         return self.val2
 
 
-print(Cal.add(30,20))
-
-# print(Cal.add2(30,20)) # 이건 동작 안함
-c1 = Cal(30,20)
-print(c1, c1.add2())
+class CalMultiply(Cal):
+    def multiply(self):
+        return self.val1 * self.val2
 
 
-# c1.val1 = 'one'
-c1.setVal1('one')
-c1.val2 = 30
-
-print(c1.add2())
+class CalDivide(CalMultiply):
+    def devide(self):
+        return self.val1 / self.val2
 
 
-
-print(Cal.subtract(540, 20))
-
-c2 = Cal(540, 30)
-print(c2.subtract2())
+c1 = CalMultiply(10,20)
+print(c1.multiply())
 
 
-
-print(c1.getVal1())
-print(c1.getVal2())
+c2 = CalDivide(100, 20)
+print(c2, c2.devide())
